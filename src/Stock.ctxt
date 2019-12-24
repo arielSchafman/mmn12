@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Stock
+comment1.params=
+comment1.target=Stock()
+comment10.params=items
+comment10.target=void\ updateStock(java.lang.String[])
+comment11.params=
+comment11.target=int\ getTempOfStock()
+comment2.params=
+comment2.target=int\ getNumOfItems()
+comment3.params=item
+comment3.target=boolean\ addItem(FoodItem)
+comment4.params=amount
+comment4.target=java.lang.String\ order(int)
+comment5.params=temp
+comment5.target=int\ howMany(int)
+comment6.params=d
+comment6.target=void\ removeAfterDate(Date)
+comment7.params=
+comment7.target=java.lang.String\ mostExpensive()
+comment8.params=
+comment8.target=int\ howManyPieces()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=12

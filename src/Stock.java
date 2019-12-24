@@ -25,22 +25,22 @@ public class Stock {
             numberOfItems++;
             return true;
         }
-        for (int i = 0; i <= numberOfItems; i++) {
-            if (_stock[i] != null) {
-                break;
-            } else if (_stock[i].equals(item)) {
+
+        for (int i = 0; i < numberOfItems; i++) {
+            if (_stock[i].equals(item)) {
                 _stock[i].setQuantity(_stock[i].getQuantity() + item.getQuantity());
+                return true;
+            } else if (numberOfItems >= 100) {
+                return false;
+            } else if (_stock[i] != null) {
+                _stock[i] = new FoodItem(item);
+                numberOfItems++;
                 return true;
             }
         }
-        if (numberOfItems >= 100) {
-            return false;
-        } else {
-            _stock[numberOfItems + 1] = new FoodItem(item);
-            ++numberOfItems;
-            return true;
-        }
+        return false;
     }
+
 
     public String order(int amount) {
         String order = "";
@@ -69,23 +69,21 @@ public class Stock {
     }
 
     public void removeAfterDate(Date d) {
-        for (int i =0; i <= numberOfItems; i++) {
+        for (int i = 0; i < numberOfItems; i++) {
+            System.out.println(i);
             if (_stock[i] == null) {
                 i++;
             }
-            if (_stock[i].getExpiryDate().after(d)){
-                for (int j = i;j<=numberOfItems;j++){
-//                    if (_stock[j] == null) {
-//                        j++;
-//                    }
-                    FoodItem tmp = new FoodItem(_stock[j]);
-                    _stock[j] = new FoodItem(tmp);
-                }
+            Date exDate = new Date(_stock[i].getExpiryDate());
+            if (exDate.after(d)) {
+                System.out.println(numberOfItems);
+                _stock[i - 1] = new FoodItem(_stock[i]);
                 _stock[numberOfItems] = null;
                 numberOfItems--;
             }
         }
     }
+
 
     public FoodItem mostExpensive() {
         int a = 0;
