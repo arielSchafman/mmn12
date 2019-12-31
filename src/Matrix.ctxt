@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Matrix
+comment0.text=\r\n\ @author\ ariel\r\n\ @version\ maman\ 13\r\n
+comment1.params=array
+comment1.target=Matrix(int[][])
+comment1.text=\r\ncopy\ Constructor\ build\ a\ 2D\ array\ of\ numbers\ between\ 0-255\r\n\ @param\ array\ the\ array\ to\ copy\r\n
+comment2.params=size1\ size2
+comment2.target=Matrix(int,\ int)
+comment2.text=\r\n\ Constructor\ build\ a\ 2D\ array\ of\ 0\r\n\ @param\ size1\ the\ length\r\n\ @param\ size2\ the\ height\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ build\ the\ matrix\ in\ the\ terminal\ visually\r\n\ @return\ the\ 2D\ array\ in\ 2D\r\n
+comment4.params=
+comment4.target=Matrix\ makeNegative()
+comment4.text=\r\n\ change\ the\ array\ so\ the\ the\ numbers\ will\ be\ opposite,\ if\ the\ number\ is\ 55\ it\ will\ become\ 200\r\n\ @return\ the\ opposite\ matrix\r\n
+comment5.params=
+comment5.target=Matrix\ imageFilterAverage()
+comment5.text=\r\n\ take\ the\ matrix\ and\ change\ every\ item\ to\ be\ the\ average\ of\ all\ the\ items\ around\ him\r\n\ @return\ the\ averaged\ matrix\r\n
+comment6.params=
+comment6.target=Matrix\ rotateClockwise()
+comment6.text=\r\n\ rotate\ the\ matrix\ clockwise\ and\r\n\ @return\ the\ clockwised\ turned\ matrix\r\n
+comment7.params=
+comment7.target=Matrix\ rotateCounterClockwise()
+comment7.text=\r\n\ rotate\ the\ matrix\ counter\ clockwise\ and\r\n\ @return\ the\ counter\ clockwised\ turned\ matrix\r\n
+numComments=8
