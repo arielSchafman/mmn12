@@ -8,7 +8,8 @@ public class Matrix {
     private int[][] matrix;
 
     /**
-     *copy Constructor build a 2D array of numbers between 0-255
+     * copy Constructor build a 2D array of numbers between 0-255
+     *
      * @param array the array to copy
      */
     public Matrix(int[][] array) {
@@ -25,6 +26,7 @@ public class Matrix {
 
     /**
      * Constructor build a 2D array of 0
+     *
      * @param size1 the length
      * @param size2 the height
      */
@@ -41,6 +43,7 @@ public class Matrix {
 
     /**
      * build the matrix in the terminal visually
+     *
      * @return the 2D array in 2D
      */
     public String toString() {
@@ -56,6 +59,7 @@ public class Matrix {
 
     /**
      * change the array so the the numbers will be opposite, if the number is 55 it will become 200
+     *
      * @return the opposite matrix
      */
     public Matrix makeNegative() {
@@ -72,6 +76,7 @@ public class Matrix {
 
     /**
      * take the matrix and change every item to be the average of all the items around him
+     *
      * @return the averaged matrix
      */
     public Matrix imageFilterAverage() {
@@ -169,6 +174,7 @@ public class Matrix {
 
     /**
      * rotate the matrix clockwise and
+     *
      * @return the clockwised turned matrix
      */
     public Matrix rotateClockwise() {
@@ -182,14 +188,16 @@ public class Matrix {
         for (int i = 0; i <= length - 1; i++) {
             for (int j = 0; j <= height - 1; j++) {
                 tmp = rotate.matrix[i][j];
-                rotate.matrix[i][j] = rotate.matrix[height-i][j];
-                rotate.matrix[height-i][j] = tmp;
+                rotate.matrix[i][j] = rotate.matrix[height - i][j];
+                rotate.matrix[height - i][j] = tmp;
             }
         }
         return rotate;
     }
+
     /**
      * rotate the matrix counter clockwise and
+     *
      * @return the counter clockwised turned matrix
      */
     public Matrix rotateCounterClockwise() {
